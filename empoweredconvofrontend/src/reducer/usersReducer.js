@@ -10,16 +10,15 @@ export default (state = initialState, action) => {
 
   switch (type) {
     case types.LOGIN_SUCCESS:
-      return { user: payload };
+      return { ...state, user: payload };
 
+    case types.GET_USERS_SUCCESS:
+      return {
+        ...state,
+        usersList: payload,
+      };
 
-      case types.GET_USERS_SUCCESS:
-        return {
-          ...state,
-          usersList: action.payload
-        }
-        
     default:
       return state;
   }
-}
+};
