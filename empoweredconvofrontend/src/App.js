@@ -4,6 +4,7 @@ import { login, register } from './actions/authActions';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 import UsersList from './components/UsersList/UsersList';
+import { Header } from 'semantic-ui-react';
 
 class App extends Component {
   state = {
@@ -32,7 +33,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <h1>Holder App</h1>
+          <Header as="h1">Empowered Conversations</Header>
           <UsersList />
         </div>
       </Router>
