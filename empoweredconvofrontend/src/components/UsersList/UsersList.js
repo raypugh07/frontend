@@ -8,10 +8,6 @@ class UsersList extends Component {
     users: [],
   };
 
-  componentDidMount() {
-    this.props.getUsers();
-  }
-
   render() {
     return (
       <Container>

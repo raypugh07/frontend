@@ -1,7 +1,7 @@
 import axios from 'axios';
 import types from './index';
 
-export const login = creds => dispatch => {
+export const login = (creds, cb) => dispatch => {
   dispatch({ type: types.LOGIN_START });
   return axios
     .post('https://empoweredconversation.herokuapp.com/oauth/token', creds, {
@@ -13,6 +13,7 @@ export const login = creds => dispatch => {
     .then(res => {
       localStorage.setItem('token', res.data.access_token);
       dispatch({ type: types.LOGIN_SUCCESS });
+      cb();
       return true;
     })
     .catch(err => {

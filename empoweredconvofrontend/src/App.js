@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { login, register } from './actions/authActions';
+import { getUsers } from './actions/getUsers';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 import UsersList from './components/UsersList/UsersList';
@@ -17,14 +18,14 @@ class App extends Component {
 
   componentDidMount() {
     // this.props.login('admin', 'password');
-    this.props.login(`grant_type=password&username=admin&password=password`);
+    this.props.login(`grant_type=password&username=admin&password=password`,() => this.props.getUsers());
     // this.logReg(this.state.creds);
   }
 
   logReg(creds) {
     this.props.register(creds, () =>
       this.props.login(
-        `grant_type=password&username=${creds.username}&password=${creds.password}`,
+        `grant_type=password&username=${creds.username}&password=${creds.password}`,() => this.props.getUsers()
       ),
     );
   }
@@ -43,5 +44,5 @@ class App extends Component {
 
 export default connect(
   null,
-  { register, login },
+  { register, login, getUsers },
 )(App);
