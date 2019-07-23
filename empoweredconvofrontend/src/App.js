@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 import UsersList from './components/UsersList/UsersList';
 import { Header } from 'semantic-ui-react';
+import FormView from './components/Form/FormView';
 
 class App extends Component {
   state = {
@@ -16,26 +17,13 @@ class App extends Component {
     },
   };
 
-  componentDidMount() {
-    // this.props.login('admin', 'password');
-    this.props.login(`grant_type=password&username=admin&password=password`,() => this.props.getUsers());
-    // this.logReg(this.state.creds);
-  }
-
-  logReg(creds) {
-    this.props.register(creds, () =>
-      this.props.login(
-        `grant_type=password&username=${creds.username}&password=${creds.password}`,() => this.props.getUsers()
-      ),
-    );
-  }
-
   render() {
     return (
       <Router>
         <div className="App">
           <Header as="h1">Empowered Conversations</Header>
           <UsersList />
+          <FormView />
         </div>
       </Router>
     );
