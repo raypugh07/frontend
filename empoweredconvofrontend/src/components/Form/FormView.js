@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { initializeConvo } from '../../actions/initConvoActions';
 import {
   Form,
   Input,
@@ -26,6 +27,7 @@ class FormView extends React.Component {
     console.log('from submit', this.state.convoRequest.survivorPhoneNum);
     console.log('from submit', this.state.convoRequest.ffName);
     console.log('from submit', this.state.convoRequest.ffPhoneNum);
+    this.props.initializeConvo(this.state.convoRequest);
   };
 
   changeHandler({ target }) {
@@ -103,4 +105,15 @@ class FormView extends React.Component {
   }
 }
 
-export default FormView;
+const mapStateToProps = state => {
+  return {
+    isSending: state.initConvo.isSending,
+    isSent: state.initConvo.isSent,
+    sendingError: state.initConvo.sendingError,
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  { initializeConvo },
+)(FormView);
