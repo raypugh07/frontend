@@ -10,21 +10,23 @@ class Landing extends React.Component {
           <div className="empowered">
             <div className="empoweredLeft">
               <div className="empoweredLeftBoxes">
-                <h2>Today I am . . .</h2>
-                <h1>
-                  E M <span className="power">P O W E R </span>E D
-                </h1>
-                <h3>When words matter most.</h3>
-                <h4>
-                  A survivor-activated tool that educates and prepares the{' '}
-                </h4>
-                <h4>
-                  person they will disclose to before the conversation takes
-                  place.
-                </h4>
+                <div>
+                  <h2>Today I am . . .</h2>
+                  <h1>
+                    E M <span className="power">P O W E R </span>E D
+                  </h1>
+                  <h3>When words matter most.</h3>
+                  <h4>
+                    A survivor-activated tool that educates and prepares the
+                    person
+                  </h4>
+                  <h4>
+                    they will disclose to before the conversation takes place.
+                  </h4>
 
-                <div className="btn">
-                  <button className="btnExplore">Explore</button>
+                  <div className="btn">
+                    <button className="btnExplore">Explore</button>
+                  </div>
                 </div>
               </div>
 
