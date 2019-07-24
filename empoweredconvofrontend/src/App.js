@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 import UsersList from './components/UsersList/UsersList';
 import { Header } from 'semantic-ui-react';
+import Bar from './components/NavBar/Bar';
 
 class App extends Component {
   state = {
@@ -34,6 +35,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
+          <Bar/>
           <Header as="h1">Empowered Conversations</Header>
           <UsersList />
         </div>

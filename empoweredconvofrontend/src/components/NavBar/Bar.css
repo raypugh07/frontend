@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+header{
+    /*border:solid blue;*/
+    display:flex;
+}
+
+nav{
+    /*border:solid green;*/
+    height: 69px;
+    width: 1409px;
+    margin:10px;
+    display:flex;
+    justify-content: flex-end;
+}
+ .logo{
+      /*border:solid red;*/
+      height: 49px;
+      width: 77px;
+      cursor: pointer;
+  }
+
+
+  .about {
+	height: 25px;
+	width: 51px;
+	color: #2E2F38;
+    font-family: 'Nunito', sans-serif; /*Avenir font isn't free*/
+	font-size: 18px;
+	font-weight: 300;
+    line-height: 25px;
+    margin:15px;
+   
+
+   
+} 
+.contact {
+	height: 25px;
+	width: 64px;
+	color: #2E2F38;
+    font-family: 'Nunito', sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+    line-height: 25px;
+    margin:15px;
+
+}
+.support {
+	height: 25px;
+	width: 65px;
+	color: #2E2F38;
+    font-family: 'Nunito', sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+    line-height: 25px;
+    margin:15px;
+
+}
+
+nav button {
+	height: 37px;
+    width: 142px;
+    border: transparent;
+    border-radius: 5px;
+    background-color: #2E2F38;
+    font-family: 'Nunito', sans-serif;
+    color: #FFFFFF;    font-size: 18px;	font-weight: 300;	line-height: 25px;
+    margin:15px;
+    position: relative; /*ran into a problem with the buttons position,using this for now*/
+    bottom:5px;
+    
+}
