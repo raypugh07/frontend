@@ -21,7 +21,7 @@ header div{
 }
  .logo{
       /*border:solid red;*/
-      height: 49px;
+      height: 54px;
       width: 177px;
       cursor: pointer;
   }
@@ -54,7 +54,7 @@ header div{
 	height: 25px;
 	width: 64px;
 	color: #2E2F38;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito', sans-serif; /*Avenir font isn't free*/
 	font-size: 18px;
 	font-weight: 300;
     line-height: 25px;
@@ -65,7 +65,7 @@ header div{
 	height: 25px;
 	width: 65px;
 	color: #2E2F38;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito', sans-serif; /*Avenir font isn't free*/
 	font-size: 18px;
 	font-weight: 300;
     line-height: 25px;
@@ -79,7 +79,7 @@ nav button {
     border: transparent;
     border-radius: 5px;
     background-color: #2E2F38;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito', sans-serif; /*Avenir font isn't free*/
     color: #FFFFFF;    font-size: 18px;	font-weight: 300;	line-height: 25px;
     margin:15px;
     cursor: pointer;
