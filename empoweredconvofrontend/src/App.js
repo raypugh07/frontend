@@ -4,6 +4,7 @@ import { login, register } from './actions/authActions';
 import { getUsers } from './actions/getUsers';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
+import Landing from "./components/LandingPage/Landing.js";
 import UsersList from './components/UsersList/UsersList';
 import { Header } from 'semantic-ui-react';
 
@@ -33,6 +34,7 @@ class App extends Component {
   render() {
     return (
       <Router>
+        <Landing/>
         <div className="App">
           <Header as="h1">Empowered Conversations</Header>
           <UsersList />

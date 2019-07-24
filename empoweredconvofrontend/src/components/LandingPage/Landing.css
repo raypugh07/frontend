@@ -1,0 +1,111 @@
+.intro {
+  /* border: 1px solid red; */
+  max-width: 1000px;
+  display: block;
+  margin: 0 auto;
+}
+
+.empowered {
+  display: flex;
+}
+
+.empoweredLeft {
+  width: 66%;
+}
+
+.empoweredLeftBoxes {
+  padding: 10px;
+  /* border: 1px solid green; */
+}
+
+.empoweredRight {
+  height: 620px;
+  background-color: #24b4a5;
+  width: 34%;
+}
+
+.intro h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.power {
+  color: #24b4a5;
+}
+
+.intro h2 {
+  font-size: 2.5rem;
+  padding: 20px 0;
+}
+
+.intro h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-style: italic;
+  padding: 20px 0;
+}
+
+.intro h4 {
+  font-size: 1.6rem;
+  padding: 5px 0;
+}
+
+.btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btnExplore {
+  background-color: #2d2f38;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 40px;
+  margin: 30px 80px;
+  font-size: 1.6rem;
+  color: white;
+}
+
+.introBottomBox {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.introBottomBoxRight {
+  height: 250px;
+  background-color: #8fedc2;
+  width: 50%;
+}
+
+/* cta mid section */
+
+.ctaBoxes {
+  /* border: 1px solid green; */
+  max-width: 1000px;
+  display: block;
+  margin: 0 auto;
+  display: flex;
+}
+
+.ctaBoxesLeft {
+  width: 66%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ctaBoxesMid {
+  height: 250px;
+  background-color: #8fedc2;
+  width: 50%;
+}
+
+.ctaBoxesRight {
+  height: 250px;
+  background-color: #24b4a5;
+  width: 34%;
+}
+
+.ctaBoxesBottom {
+    height: 250px;
+    background-color: #24b4a5;
+}
