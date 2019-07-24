@@ -13,11 +13,27 @@ nav{
     display:flex;
     justify-content: flex-end;
 }
+
+header div{
+    display:flex;
+    flex-direction: column;
+    margin-top:10px;
+}
  .logo{
       /*border:solid red;*/
       height: 49px;
-      width: 77px;
+      width: 177px;
       cursor: pointer;
+  }
+
+  header div p{
+        
+        color: #2E2F38;
+        font-family: 'Nunito', sans-serif; /*Avenir font isn't free*/       
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 16px;
+    
   }
 
 
@@ -66,6 +82,7 @@ nav button {
     font-family: 'Nunito', sans-serif;
     color: #FFFFFF;    font-size: 18px;	font-weight: 300;	line-height: 25px;
     margin:15px;
+    cursor: pointer;
     position: relative; /*ran into a problem with the buttons position,using this for now*/
     bottom:5px;
     

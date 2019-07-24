@@ -7,7 +7,8 @@ import '../NavBar/Bar.css'
 export default function Bar(){
     return(
         <Router><div className='nav'>
-            <header><img alt='logo' src={Logo} className='logo'></img>
+            <header><div><img alt='logo' src={Logo} className='logo'></img><p>Empowered Conversation</p>
+            </div>
                 <nav>
                     <Link className='about' to='/about'>About</Link>
                     <Link className='contact' to='/contact'>Contact</Link>
