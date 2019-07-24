@@ -4,6 +4,7 @@ import medEcLogo from '../assets/Medium/EmpoweredConversation-Logo-Md-RGB.png';
 
 export const NavHeader = styled.header`
   display: flex;
+  background-color: #ffffff;
 `;
 
 export const Nav = styled.nav`
@@ -37,7 +38,7 @@ export const NavBarLogo = styled.img.attrs({
 
 export const linkDec = {
   height: '25px',
-  width: '80px',
+  width: '70px',
   margin: '0 15px',
   display: 'flex',
   justifyContent: 'center',

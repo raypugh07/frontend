@@ -1,9 +1,18 @@
 import React from 'react';
+import { Stage, StageLeft, LimeCard, LowInfoBox } from '../styles/ResStyling';
 
-export default class Resources extends React.Component {
+class Resources extends React.Component {
   render() {
     return (
-      <></>
+      <Stage>
+        <StageLeft>
+          Hi.
+        </StageLeft>
+        <LimeCard />
+        {/* <LowInfoBox /> */}
+      </Stage>
     );
   };
 };
+
+export default Resources;

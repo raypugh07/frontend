@@ -11,7 +11,9 @@ const store = createStore();
 
 const application = (
   <Provider store={store}>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </Provider>
 );
 

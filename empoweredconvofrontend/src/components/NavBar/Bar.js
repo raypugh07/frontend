@@ -13,10 +13,9 @@ export default function Bar(){
             <p>Empowered Conversation</p>
           </LogoDiv>
           <Nav>
-            <Link style={linkDec} to='/resources'>Resources</Link>
             <Link style={linkDec} to='/about'>About</Link>
             <Link style={linkDec} to='/contact'>Contact</Link>
-            <Link style={linkDec} to='/support'>Support</Link>
+            <Link style={linkDec} to='/resources'>Resources</Link>
             <button style={navButton}>Use The Tool</button>
           </Nav>
         </NavHeader>

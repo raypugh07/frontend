@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { login, register } from './actions/authActions';
 import { getUsers } from './actions/getUsers';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import './App.css';
 import UsersList from './components/UsersList/UsersList';
 import { Header } from 'semantic-ui-react';
 import NavBar from './components/NavBar/Bar';
+import Resources from './views/Resources';
+import { Backdrop } from './styles/ResStyling';
 
 class App extends Component {
   state = {
@@ -33,15 +35,10 @@ class App extends Component {
 
   render() {
     return (
-      <>
-        <NavBar/>
-        {/* <Router>
-          <div className="App">
-            <Header as="h1">Empowered Conversations</Header>
-            <UsersList />
-          </div>
-        </Router> */}
-      </>
+      <Backdrop>
+        <NavBar />
+        <Route path='/resources' component={Resources} />
+      </Backdrop>
     );
   }
 }
