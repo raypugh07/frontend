@@ -8,7 +8,8 @@ import {
   Dropdown,
   Select,
 } from 'formsy-semantic-ui-react';
-import { Button, Container } from 'semantic-ui-react';
+import { Button, Container, Modal, Segment, Label } from 'semantic-ui-react';
+import TOS from './TOS';
 
 class FormView extends React.Component {
   state = {
@@ -17,21 +18,87 @@ class FormView extends React.Component {
       ffName: '',
       ffPhoneNum: '',
     },
+    isModalOpen: false,
+  };
+
+  submitHandler = e => {
+    console.log('send text button hit');
+    console.log('from submit', this.state.convoRequest.survivorPhoneNum);
+    console.log('from submit', this.state.convoRequest.ffName);
+    console.log('from submit', this.state.convoRequest.ffPhoneNum);
+  };
+
+  changeHandler({ target }) {
+    this.setState(
+      {
+        convoRequest: {
+          ...this.state.convoRequest,
+          [target.name]: target.value,
+        },
+      },
+      () => console.log(this.state.convoRequest, 'from change'),
+    );
+  }
+
+  handleModalOpen = () => {
+    this.setState({ isModalOpen: !this.state.isModalOpen });
   };
 
   render() {
     return (
-      <Container>
-        <Form>
-          <h1>hii</h1>
-          <Form.Input
-            name="survivorPhoneNum"
-            label="Survivor Phone Number"
-          ></Form.Input>
-          <Form.Button></Form.Button>
-        </Form>
-        {console.log('')}
-      </Container>
+      <Segment>
+        <Modal
+          trigger={
+            <Button
+              content={'click to open modal'}
+              onClick={this.handleModalOpen}
+            />
+          }
+          open={this.state.isModalOpen}
+          onClose={this.handleModalOpen}
+        >
+          <Modal.Header>Terms of Service</Modal.Header>
+          <Modal.Content>
+            <TOS />
+          </Modal.Content>
+        </Modal>
+        <Container>
+          <Form onValidSubmit={() => this.submitHandler()}>
+            <Form.Group>
+              <Form.Input
+                name="survivorPhoneNum"
+                label="Your Phone Number"
+                validations="isNumeric"
+                required
+                onChange={e => this.changeHandler(e)}
+              />
+            </Form.Group>
+            <Form.Group>
+              <Form.Input
+                name="ffName"
+                label="Name of Friend, Family, or Loved One "
+                validations="isWords"
+                placeholder="Jane Doe"
+                required
+                onChange={e => this.changeHandler(e)}
+              />
+              <Form.Input
+                name="ffPhoneNum"
+                label="Phone Number of Friend, Family, or Loved One"
+                validations="isNumeric"
+                required
+                onChange={e => this.changeHandler(e)}
+              />
+            </Form.Group>
+            <Checkbox
+              name="survivorLiability"
+              label={<label>I accept the terms of service</label>}
+              validations="isTrue"
+            />
+            <Form.Button type="submit">Send Text</Form.Button>
+          </Form>
+        </Container>
+      </Segment>
     );
   }
 }
