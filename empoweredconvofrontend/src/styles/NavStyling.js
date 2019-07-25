@@ -13,7 +13,39 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  @media (max-width: 1000px) {
+    height: 72px;
+    width: 1000px;
+  }
+  @media (max-width: 800px) {
+    height: 72px;
+    width: 800px;
+  }
+  @media (max-width: 676px) {
+   display:none;
+  }
+  
 `;
+
+export const MobNav=styled.nav`
+
+	height: 25px;
+	width: 53px;
+	opacity: 0.5;
+	color: #2E2F38;
+  font-family: 'Nunito', sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	letter-spacing: 1.5px;
+  line-height: 25px;
+  border:solid red;
+`;
+
+
+
+
+
+
 
 export const LogoDiv = styled.div`
   margin: 5px 0 5px 25px;
@@ -24,8 +56,16 @@ export const LogoDiv = styled.div`
   font-size: 12px;
   font-weight: 500;
   line-height: 16px;
-  border:solid red;
   width:200px;
+  @media (max-width: 676px) {
+    
+      width: 100px;
+      color: #2E2F38;
+      font-family: 'Nunito', sans-serif;
+      font-size: 8.69px;
+      font-weight: 500;
+      line-height: 11px;
+    }
   
 `;
 
@@ -34,10 +74,13 @@ export const NavBarLogo = styled.img.attrs({
   src: `${medEcLogo}`
 })`
   height: 54px;
-  border:solid blue;
   width:50%;
   margin:auto;
   cursor: pointer;
+  @media (max-width: 676px) {
+    
+    width:75%;
+  }
 `;
 
 export const linkDec = {
@@ -69,3 +112,4 @@ export const navButton = {
   border: 'transparent',
   borderRadius: '5px',
 };
+
