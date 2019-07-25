@@ -10,21 +10,23 @@ export const NavHeader = styled.header`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: #ffffff;
 `;
 
 export const Nav = styled.nav`
   height: 69px;
-  margin: 10px;
+  width: 36%;
+  // margin: 0 10px 0 0;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 `;
 
 export const LogoDiv = styled.div`
   height: 83px;
   width: 142px;
-  margin: 5px 5px 5px 25px;
+  margin: 5px 5px 5px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,7 +38,7 @@ export const LogoDiv = styled.div`
 `;
 
 export const NavBarLogo = styled.img.attrs({
-  alt: "Empowered Conversations clickable medium logo.",
+  alt: "Empowered Conversations clickable logo; returns to homepage.",
   src: `${medEcLogo}`
 })`
   height: 49px;
@@ -46,8 +48,8 @@ export const NavBarLogo = styled.img.attrs({
 
 export const linkDec = {
   height: '25px',
-  width: '70px',
-  margin: '0 15px',
+  // width: '70px',
+  // margin: '0 15px',
   display: 'flex',
   justifyContent: 'center',
   color: '#2e2f38',
@@ -61,7 +63,7 @@ export const linkDec = {
 export const navButton = {
   height: '25px',
   width: '142px',
-  margin: '0 15px',
+  margin: '0 20px 0 0',
   bottom: '5px',
   color: '#FFFFFF',
   fontFamily: 'Nunito',
