@@ -6,10 +6,9 @@ class Resources extends React.Component {
     return (
       <Stage>
         <StageLeft>
-          Hi.
+          <LimeCard />
         </StageLeft>
-        <LimeCard />
-        {/* <LowInfoBox /> */}
+        <LowInfoBox />
       </Stage>
     );
   };
