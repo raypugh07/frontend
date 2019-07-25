@@ -1,27 +1,26 @@
 import React from 'react'
-//import {Menu} from 'semantic-ui-reacts'
-import {BrowserRouter as Router,Route,Link} from 'react-router-dom'
-import Logo from './navlogo.JPG';
-import '../NavBar/Bar.css'
+//import { Menu } from 'semantic-ui-reacts'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { NavHeader, Nav, LogoDiv, NavBarLogo, linkDec, navButton } from '../../styles/NavStyling';
 
 export default function Bar(){
-    return(
-        <Router><div className='nav'>
-            <header><div><img alt='logo' src={Logo} className='logo'></img><p>Empowered Conversation</p>
-            </div>
-                <nav>
-                    <Link className='about' to='/about'>About</Link>
-                    <Link className='contact' to='/contact'>Contact</Link>
-                    <Link className='support' to='/support'>Support</Link>
-                    <button>Use The Tool</button>
-                </nav>
-
-                    
-            </header>
-        </div>
-
-
-
-        </Router>
-    )
-}
+  return(
+    <Router>
+      <div>
+        <NavHeader>
+          <LogoDiv>
+            <NavBarLogo/>
+            <p>Empowered Conversation</p>
+          </LogoDiv>
+          <Nav>
+            
+            <Link style={linkDec} to='/about'>About</Link>
+            <Link style={linkDec} to='/contact'>Contact</Link>
+            <Link style={linkDec} to='/support'>Support</Link>
+            <button style={navButton}>Use The Tool</button>
+          </Nav>
+        </NavHeader>
+      </div>
+    </Router>
+  );
+};
