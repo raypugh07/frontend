@@ -46,7 +46,15 @@ class Landing extends React.Component {
             <div className="ctaBoxesRight"></div>
           </div>
           <div className="ctaBoxesBottom"></div>
+
+            <div className="ctaVideo">Video</div>
+            <div className="ctaVideoBox">
+                <h2>One Conversation at a Time</h2>
+                <h4>Our tool takes the burden off of the survivor for having to educate their loved ones about assault during disclosure because we provide that training ahead of time.</h4>
+            </div>
         </section>
+
+        <section className="whatWeDo"></section>
       </div>
     );
   }

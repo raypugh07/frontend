@@ -79,6 +79,10 @@
 
 /* cta mid section */
 
+.cta {    
+  position: relative;
+}
+
 .ctaBoxes {
   /* border: 1px solid green; */
   display: flex;
@@ -94,6 +98,19 @@
   height: 410px;
   background-color: #8fedc2;
   width: 50%;
+}
+
+.ctaVideo {
+  position: absolute;
+  top: 80px;
+  left: 200px;
+  background-color: grey;
+  height: 480px;
+  width: 720px;
+  color: white;
+  text-align: center;
+  font-size: 5rem;
+  padding-top: 200px;
 }
 
 .ctaBoxesRight {
