@@ -6,55 +6,29 @@ class Landing extends React.Component {
   render() {
     return (
       <div className="landing">
-        <section className="intro">
-          <div className="empowered">
-            <div className="empoweredLeft">
-              <div className="empoweredLeftBoxes">
-                <div>
-                  <h2>Today I am . . .</h2>
-                  <h1>
-                    E M <span className="power">P O W E R </span>E D
-                  </h1>
-                  <h3>When words matter most.</h3>
-                  <h4>
-                    A survivor-activated tool that educates and prepares the
-                    person
-                  </h4>
-                  <h4>
-                    they will disclose to before the conversation takes place.
-                  </h4>
+        <img
+          className="landingBackground"
+          src="assets/Background new.png"
+          alt="background"
+        />
 
-                  <div className="btn">
-                    <button className="btnExplore">Explore</button>
-                  </div>
-                </div>
-              </div>
-
-              <div className="introBottomBox">
-                <div className="introBottomBoxRight"></div>
-              </div>
-            </div>
-            <div className="empoweredRight"></div>
+        <section className="introContainer">
+          <div className="intro">
+            <img src="assets/intro/Today I am . . ..png" alt="today i am"/>
+            <img src="assets/intro/EMPOWERED.png" alt="empowered"/>
+            <img src="assets/intro/When words matter mo.png" alt="when words matter"/>
+            <img src="assets/intro/A survivor-activated.png" alt="survivor activated tool"/>
           </div>
+          <img className="btnExplore" src="assets/intro/explore button.png" alt="explore" />
         </section>
+        
+        <section className="ctaContainer">
 
-        <section className="cta">
-          <div className="ctaBoxes">
-            <div className="ctaBoxesLeft">
-              <div className="ctaBoxesMid"></div>
-            </div>
-            <div className="ctaBoxesRight"></div>
-          </div>
-          <div className="ctaBoxesBottom"></div>
+          <img src="assets/cta/Rectangle.png" alt="background rectangle"/>
 
-            <div className="ctaVideo">Video</div>
-            <div className="ctaVideoBox">
-                <h2>One Conversation at a Time</h2>
-                <h4>Our tool takes the burden off of the survivor for having to educate their loved ones about assault during disclosure because we provide that training ahead of time.</h4>
-            </div>
+          <div></div>
+
         </section>
-
-        <section className="whatWeDo"></section>
       </div>
     );
   }
