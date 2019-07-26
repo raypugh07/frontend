@@ -45,9 +45,9 @@ export default function Bar(){
   
     <ul id="menu">
     
-      <a href="#"><li>About</li></a>
-      <a href="#"><li>Contact</li></a>
-      <a href="#"><li>Resources</li></a>
+    <Link to='/about'><li>About</li></Link>
+    <Link to='/contact'><li>Contact</li></Link>
+    <Link to='/resources'><li>Resources</li></Link>
       <button style={navButton}>Use The Tool</button>
      
     </ul>

@@ -34,9 +34,9 @@ export default function Footer(){
 
            <div className='icons'>
 
-            <div className='icon'>{icon}</div>
-            <div className='icon'>{icon2}</div>
-            <div className='icon'>{icon3}</div>
+            <div className='icon'><a href='https://twitter.com/empoweredconvo'>{icon}</a></div>
+            <div className='icon'><a href='https://www.instagram.com/empoweredconvo/'>{icon2}</a></div>
+            <div className='icon'><a href='https://www.facebook.com/empoweredconvo/'>{icon3}</a></div>
 
             </div>
 
