@@ -17,7 +17,7 @@ export default function Bar(){
             
             <Link style={linkDec} to='/about'>About</Link>
             <Link style={linkDec} to='/contact'>Contact</Link>
-            <Link style={linkDec} to='/support'>Resources</Link>
+            <Link style={linkDec} to='/resources'>Resources</Link>
             <button style={navButton}>Use The Tool</button>
           </Nav>
         
