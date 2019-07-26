@@ -7,6 +7,7 @@ import './App.css';
 import UsersList from './components/UsersList/UsersList';
 import { Header } from 'semantic-ui-react';
 import Bar from './components/NavBar/Bar';
+import Footer from './components/Footer/Footer';
 
 class App extends Component {
   state = {
@@ -38,6 +39,7 @@ class App extends Component {
           <Bar/>
           <Header as="h1">Empowered Conversations</Header>
           <UsersList />
+          <Footer/>
         </div>
       </Router>
     );

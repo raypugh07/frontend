@@ -290,3 +290,68 @@ a:hover
 
  
 }
+
+footer{
+    margin-top:10px;
+    display:flex;
+    flex-direction: column;
+    background:#FFFFFF;
+
+ 
+
+}
+
+footer p:first-child{
+    
+    height: 41px;
+   
+    color: #24B4A5;
+    font-family: 'Nunito', sans-serif; /*Avenir font isn't free*/   
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 41px;
+    margin:15px 5px 15px 15px;
+}
+
+.heart{
+    padding-top:25px;
+    font-size: 18px;
+    color: #24B4A5;
+
+    
+}
+.topfooter{
+    display:flex;
+    justify-content: center;
+}
+
+
+footer p{
+   
+        height: 27px;
+        
+        color: #2E2F38;
+        font-family: 'Nunito', sans-serif; /*Avenir font isn't free*/   
+        font-size: 25px;
+        font-weight: 300;
+        line-height: 27px;
+        
+   
+
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+   
+}
+
+.icon{
+    
+        font-size: 42px;
+        color: #2E2F38;
+        margin:25px;
+        cursor: pointer;
+  
+    
+}

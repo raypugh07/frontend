@@ -17,7 +17,7 @@ export default function Bar(){
             
             <Link style={linkDec} to='/about'>About</Link>
             <Link style={linkDec} to='/contact'>Contact</Link>
-            <Link style={linkDec} to='/support'>Support</Link>
+            <Link style={linkDec} to='/support'>Resources</Link>
             <button style={navButton}>Use The Tool</button>
           </Nav>
         
@@ -47,7 +47,7 @@ export default function Bar(){
     
       <a href="#"><li>About</li></a>
       <a href="#"><li>Contact</li></a>
-      <a href="#"><li>Support</li></a>
+      <a href="#"><li>Resources</li></a>
       <button style={navButton}>Use The Tool</button>
      
     </ul>

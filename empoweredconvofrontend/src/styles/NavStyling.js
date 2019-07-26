@@ -4,6 +4,7 @@ import medEcLogo from '../assets/Medium/EmpoweredConversation-Logo-Md-RGB.png';
 
 export const NavHeader = styled.header`
   display: flex;
+  background:#FFFFFF;
   @media (max-width: 676px) {
     padding-top:10px;
    }
@@ -11,6 +12,7 @@ export const NavHeader = styled.header`
 `;
 
 export const Nav = styled.nav`
+  background:#FFFFFF;
   height: 69px;
   width: 1440px;
   margin:10px;
