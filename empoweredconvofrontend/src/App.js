@@ -6,7 +6,6 @@ import { Route } from 'react-router-dom';
 import './App.css';
 import UsersList from './components/UsersList/UsersList';
 import { Header } from 'semantic-ui-react';
-import NavBar from './components/NavBar/Bar';
 import Resources from './views/Resources';
 import { Backdrop } from './styles/ResStyling';
 
@@ -36,7 +35,6 @@ class App extends Component {
   render() {
     return (
       <Backdrop>
-        <NavBar />
         <Route path='/resources' component={Resources} />
       </Backdrop>
     );
