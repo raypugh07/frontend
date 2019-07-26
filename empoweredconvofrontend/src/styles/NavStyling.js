@@ -65,15 +65,52 @@ export const LogoDiv = styled.div`
   font-size: 12px;
   font-weight: 500;
   line-height: 16px;
-  width:200px;
+  width:15%;
+  @media (max-width:1200px){
+    width:18%;
+  }
+  @media (max-width:1024px){
+    width:20%;
+  }
+  @media (max-width:1000px){
+    width:20%;
+  }
+  @media (max-width:929px){
+    width:22%;
+  }
+  @media (max-width:891px){
+    width:25%;
+  }
+  @media (max-width:842px){
+    width:26%;
+  }
+  @media (max-width:824px){
+    width:28%;
+  }
+  @media (max-width:800px){
+    width:25%;
+  }
+  @media (max-width:764px){
+    width:28%;
+  }
+  @media (max-width:724px){
+    width:30%;
+  }
+  @media (max-width:702px){
+    width:32%;
+  }
+ 
   @media (max-width: 676px) {
     
-      width: 100px;
+      width: 25%;
       color: #2E2F38;
       font-family: 'Nunito', sans-serif;
       font-size: 8.69px;
       font-weight: 500;
       line-height: 11px;
+    }
+    @media (max-width:500px){
+      width:150px;
     }
   
 `;

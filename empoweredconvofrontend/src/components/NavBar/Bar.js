@@ -10,7 +10,7 @@ export default function Bar(){
       <div>
         <NavHeader>
           <LogoDiv>
-            <NavBarLogo/>
+            <Link to='/'><NavBarLogo/></Link>
             <p>Empowered Conversation</p>
           </LogoDiv>
           <Nav>
@@ -44,10 +44,11 @@ export default function Bar(){
     
   
     <ul id="menu">
-      <a href="#"><li>Home</li></a>
+    
       <a href="#"><li>About</li></a>
-      <a href="#"><li>Support</li></a>
       <a href="#"><li>Contact</li></a>
+      <a href="#"><li>Support</li></a>
+      <button style={navButton}>Use The Tool</button>
      
     </ul>
   </div>
