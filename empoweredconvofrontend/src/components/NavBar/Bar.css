@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 
-header{
-    /*border:solid blue;*/
+/*header{
+    /*border:solid blue;
     display:flex;
 }
 
 nav{
-    /*border:solid green;*/
+    /*border:solid green;
     height: 69px;
     width: 1409px;
     margin:10px;
@@ -20,7 +20,7 @@ header div{
     margin-top:10px;
 }
  .logo{
-      /*border:solid red;*/
+      border:solid red;
       height: 54px;
       width: 177px;
       cursor: pointer;
@@ -29,7 +29,7 @@ header div{
   header div p{
         
         color: #2E2F38;
-        font-family: 'Nunito', sans-serif; /*Avenir font isn't free*/       
+        font-family: 'Nunito', sans-serif; Avenir font isn't free     
         font-size: 12px;
         font-weight: 500;
         line-height: 16px;
@@ -41,7 +41,7 @@ header div{
 	height: 25px;
 	width: 51px;
 	color: #2E2F38;
-    font-family: 'Nunito', sans-serif; /*Avenir font isn't free*/
+    font-family: 'Nunito', sans-serif; /*Avenir font isn't free
 	font-size: 18px;
 	font-weight: 300;
     line-height: 25px;
@@ -54,7 +54,7 @@ header div{
 	height: 25px;
 	width: 64px;
 	color: #2E2F38;
-    font-family: 'Nunito', sans-serif; /*Avenir font isn't free*/
+    font-family: 'Nunito', sans-serif; /*Avenir font isn't free
 	font-size: 18px;
 	font-weight: 300;
     line-height: 25px;
@@ -65,7 +65,7 @@ header div{
 	height: 25px;
 	width: 65px;
 	color: #2E2F38;
-    font-family: 'Nunito', sans-serif; /*Avenir font isn't free*/
+    font-family: 'Nunito', sans-serif; /*Avenir font isn't free
 	font-size: 18px;
 	font-weight: 300;
     line-height: 25px;
@@ -73,21 +73,220 @@ header div{
 
 }
 
-nav button {
+/*nav button {
 	height: 37px;
     width: 142px;
     border: transparent;
     border-radius: 5px;
     background-color: #2E2F38;
-    font-family: 'Nunito', sans-serif; /*Avenir font isn't free*/
+    font-family: 'Nunito', sans-serif; /*Avenir font isn't free
     color: #FFFFFF;    font-size: 18px;	font-weight: 300;	line-height: 25px;
     margin:15px;
     cursor: pointer;
-    position: relative; /*ran into a problem with the buttons position,using this for now*/
+    position: relative; /*ran into a problem with the buttons position,using this for now
     bottom:5px;
     
+}*/
+
+/*mobile nav...used a tutorial and refactored for our needs dev credited below,may refactor with js/react but
+vanilla css was the best option for now*/
+
+/*
+ * Made by Erik Terwan
+ * 24th of November 2015
+ * MIT License
+ *
+ *
+ * If you are thinking of using this in
+ * production code, beware of the browser
+ * prefixes.
+ */
+
+.mobilenav{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width:100%;
+   
 }
 
-/*.bm-burger-bars {
-    background: #373a47;
-  }*/
+@media (min-width:678px){
+    .mobilenav{
+    display:none;
+}
+}
+
+.menu {
+	height: 25px;
+	width: 53px;
+	opacity: 0.5;
+	color: #2E2F38;
+    font-family: 'Nunito', sans-serif; /*Avenir font isn't free*/   
+	font-size: 18px;
+	font-weight: 300;
+	letter-spacing: 1.5px;
+	line-height: 25px;
+}
+
+nav{
+    width:25%;
+    display:flex;
+    justify-content: flex-end;
+    padding:5px;
+}
+
+a
+{
+text-decoration: none;
+color: #2E2F38;
+font-family: 'Nunito', sans-serif; /*Avenir font isn't free*/   
+  
+  transition: color 0.3s ease;
+}
+
+a:hover
+{
+  color: #24B4A5
+}
+
+#menuToggle
+{
+    display: flex;
+   
+    flex-direction: column;
+    padding-top:15px;
+    padding-right:10px;
+    position: relative;
+    
+    
+    
+    
+    
+   
+    /*left: 50px;*/
+ 
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #2E2F38;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+
+#menu
+{
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    display:none;
+    
+    
+  
+ 
+  
+  
+  background: white;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(0,0,0,0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+
+#menuToggle input:checked ~ ul
+{
+  transform:none;
+  transform: translate(-50%, 0);
+  display:block;
+
+ 
+}

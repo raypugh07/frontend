@@ -4,6 +4,10 @@ import medEcLogo from '../assets/Medium/EmpoweredConversation-Logo-Md-RGB.png';
 
 export const NavHeader = styled.header`
   display: flex;
+  @media (max-width: 676px) {
+    padding-top:10px;
+   }
+
 `;
 
 export const Nav = styled.nav`
@@ -13,6 +17,14 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  @media (max-width: 1250px) {
+    height: 72px;
+    width: 1250px;
+  }
+  @media (max-width: 1119px) {
+    height: 72px;
+    width: 1119px;
+  }
   @media (max-width: 1000px) {
     height: 72px;
     width: 1000px;
@@ -39,13 +51,10 @@ export const MobNav=styled.nav`
 	letter-spacing: 1.5px;
   line-height: 25px;
   border:solid red;
+  @media (min-width:678px){
+    display:none;
+  }
 `;
-
-
-
-
-
-
 
 export const LogoDiv = styled.div`
   margin: 5px 0 5px 25px;

@@ -20,12 +20,43 @@ export default function Bar(){
             <Link style={linkDec} to='/support'>Support</Link>
             <button style={navButton}>Use The Tool</button>
           </Nav>
-          <MobNav>
-            Menu
-            <BurgerMenu/>
-          </MobNav>
-        </NavHeader>
+        
+         <div className='mobilenav'>
+           
+         
+
+          <nav role="navigation">
+
+          
+            
+  <div id="menuToggle">
+  
+
+    <input type="checkbox" />
+    
+    
+
+    
+    <span></span>
+    <span></span>
+    <span></span>
+   
+    
+  
+    <ul id="menu">
+      <a href="#"><li>Home</li></a>
+      <a href="#"><li>About</li></a>
+      <a href="#"><li>Support</li></a>
+      <a href="#"><li>Contact</li></a>
+     
+    </ul>
+  </div>
+</nav>
+</div>
+         
+          </NavHeader>
       </div>
+     
     </Router>
   );
 };
