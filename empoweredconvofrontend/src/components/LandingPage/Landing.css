@@ -180,6 +180,10 @@ code {
   padding: 0 0 25px 0;
 }
 
+.introMobile {
+  display: none;
+}
+
 .btnExplore {
   margin: 20px 0 10px 650px;
 }
