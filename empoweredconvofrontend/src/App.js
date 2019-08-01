@@ -35,10 +35,10 @@ class App extends Component {
     return (
       <Router>
         <Landing/>
-        <div className="App">
+        {/* <div className="App">
           <Header as="h1">Empowered Conversations</Header>
           <UsersList />
-        </div>
+        </div> */}
       </Router>
     );
   }

@@ -1,7 +1,166 @@
+/* ------------------------------------*\
+RESET
+\*------------------------------------*/
+
+/* Use your own code or past solution for Great Idea Web Page CSS here! */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*------------------------------------*\
+my CSS
+\*------------------------------------*/
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
 .landing {
   margin: 0 auto;
-  border: 1px solid red;
   max-width: 1440px;
+  overflow: auto;
+  /* Weird quirk: When you remove the border from the div the layout changes. You can prevent margins from collapsing by either adding a border or some padding to the top of your block element, or by creating a new block formatting context by setting overflow: auto */
 }
 
 .landingBackground {
@@ -25,13 +184,192 @@
   margin: 20px 0 10px 650px;
 }
 
-.ctaContainer{
+.ctaContainer {
   display: flex;
   justify-content: center;
+  margin-right: 50px;
 }
 
-.ctaContainer img{
+.cta {
+  margin: 200px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ctaBackground {
   position: absolute;
   z-index: -9;
   margin: 110px 0 0 0;
+}
+
+.ctaVideoContainer {
+  position: relative;
+}
+
+.ctaVideo {
+  width: 769px;
+}
+
+.btnPlay {
+  position: absolute;
+  top: 180px;
+  left: 320px;
+}
+
+.ctaText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0 40px 0 0;
+}
+
+.ctaTextMobile {
+  display: none;
+}
+
+.ctaText img {
+  padding: 25px 0;
+}
+
+/* What we do */
+
+.whatWeDoContainer {
+  margin: 170px 0 100px 160px;
+}
+
+.numListItem {
+  display: flex;
+  align-items: flex-start;
+  margin: 60px 0 0 0;
+}
+
+.oval {
+  position: relative;
+}
+
+.ovalNum {
+  position: absolute;
+  top: 15px;
+  left: 18px;
+}
+
+.ovalDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 13px 0 0 30px;
+}
+
+.numTitle {
+  margin: 0 0 20px 0;
+}
+
+.mobileListItems {
+  display: none;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+  .introContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .introMobile {
+    display: none;
+  }
+
+  .intro {
+    margin: 150px 0 0 0;
+  }
+
+  .btnExplore {
+    margin: 20px 0 10px 450px;
+  }
+
+  .ctaContainer {
+    margin: 200px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+  }
+
+  .cta {
+    margin: 0 0 0 0;
+  }
+
+  .ctaText {
+    display: none;
+  }
+
+  .ctaTextMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 100px;
+  }
+
+  .whatWeDoContainer {
+    margin: 0 auto;
+    padding: 170px 0 100px 0;
+  }
+
+  .whatWeDoImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .numListItem {
+    display: none;
+  }
+
+  .mobileListItems {
+    display: flex;
+  }
+
+  .mobileListItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .mobileListItemTitle {
+    margin: 50px 0 20px 0;
+  }
+}
+
+@media (max-width: 790px) {
+  .ctaTextMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 20px;
+  }
+
+  .mobileListItems {
+    flex-direction: column;
+    background-color: #24b4a5;
+    /* border: 1px solid red; */
+    padding: 0 0 50px 0;
+  }
+
+  .introDesktop {
+    display: none;
+  }
+
+  .introMobile {
+    display: block;
+  }
+
+  .intro {
+    margin: 50px 0 0 0;
+  }
+
+  .btnExplore {
+    margin: 20px 0 10px 250px;
+  }
 }
