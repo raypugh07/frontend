@@ -4,6 +4,7 @@ import { login, register } from './actions/authActions';
 import { getUsers } from './actions/getUsers';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
+import Landing from "./components/LandingPage/Landing.js";
 import UsersList from './components/UsersList/UsersList';
 import { Header } from 'semantic-ui-react';
 import Bar from './components/NavBar/Bar';
@@ -35,12 +36,15 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
+
+        
+
+
           <Bar/>
-          <Header as="h1">Empowered Conversations</Header>
-          <UsersList />
+          <Landing/>
           <Footer/>
-        </div>
+
+
       </Router>
     );
   }
@@ -50,3 +54,6 @@ export default connect(
   null,
   { register, login, getUsers },
 )(App);
+
+
+//test
