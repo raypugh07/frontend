@@ -1,0 +1,106 @@
+/* BACKGROUND */
+.stage {
+  height: 900px;
+  width: 100%;
+}
+
+.stage-left {
+  min-height: 44%;
+  width: 64%;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: #ffffff;
+}
+
+.stage-left .stage-title {
+  width: 440px;
+  margin: 120px 0 40px 50%;
+  padding-right: 50px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.stage-left .stage-title .required {
+  color: red;
+}
+
+.stage-left .lime-card {
+  height: 532px;
+  width: 440px;
+  position: relative;
+  z-index: 2;
+  background-color: #8fedc2;
+}
+
+/* CONTENT PLATE */
+.float-plane {
+  min-height: calc(100vh - 95px);
+  min-width: 100%;
+  padding-top: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
+}
+
+.float-plane .float-box {
+  /* height: 400px; */
+  width: 700px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.float-plane .float-box .modal-box {
+  width: 100%;
+  padding: 0 10px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.float-plane .float-box .content-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.float-pox .content-box .half-box {
+  height: 100%;
+  min-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.content-box .half-box .text-box {
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.content-box .half-box .divider {
+  width: 1px;
+  margin: 0 12px;
+  border-left: 1px solid black;
+}
+
+.float-plane .float-box .agree-submit {
+  width: 100%;
+  padding: 10px 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

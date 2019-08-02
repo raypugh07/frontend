@@ -21,8 +21,8 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Header as="h1">Empowered Conversations</Header>
-          <UsersList />
+          {/* <Header as="h1">Empowered Conversations</Header> */}
+          {/* <UsersList /> */}
           <FormView />
         </div>
       </Router>
