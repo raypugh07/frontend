@@ -64,7 +64,7 @@ class FormView extends React.Component {
               <Modal
                 trigger={
                   <Button
-                    content={'click to open modal'}
+                    content={'Terms of Service'}
                     onClick={this.handleModalOpen}
                   />
                 }
@@ -77,74 +77,73 @@ class FormView extends React.Component {
                 </Modal.Content>
               </Modal>
             </Container>
-            <Grid columns={2} container className="content-box">
-              <Form onValidSubmit={() => this.submitHandler()} widths="equal">
-                <Grid.Column floated="left" widths={10}>
-                  <Form.Group>
+            <Container className="content-box">
+              <Form onValidSubmit={() => this.submitHandler()}>
+                <Grid columns={2} divided>
+                  <Grid.Column>
                     <div className="text-box">
                       <h5>Your Information</h5>
                       <p><text>
-                          Don't worry! We'll keep you anonymous, no matter what! We just need your cell
+                        Don't worry! We'll keep you anonymous, no matter what! We just need your cell
                         phone number to give you an update when the recipient gets the text.
                       </text></p>
                     </div>
-                    <Form.Input
-                      name="ffName"
-                      label="Your Name"
-                      validations="isWords"
-                      placeholder="Your Name"
-                      onChange={e => this.changeHandler(e)}
-                      fluid
-                    />
-                    <Form.Input
-                      name="survivorPhoneNum"
-                      label="Your Phone Number"
-                      validations="isNumeric"
-                      required
-                      onChange={e => this.changeHandler(e)}
-                      fluid
-                    />
-                  </Form.Group>
-                </Grid.Column>
-                <Grid.Column floated="right" widths={10}>
-                  <Form.Group>
+                    <Form.Group grouped>
+                      <Form.Input
+                        name="ffName"
+                        label="Your Name"
+                        validations="isWords"
+                        onChange={e => this.changeHandler(e)}
+                        fluid
+                      />
+                      <Form.Input
+                        name="survivorPhoneNum"
+                        label="Your Phone Number "
+                        validations="isNumeric"
+                        required
+                        onChange={e => this.changeHandler(e)}
+                        fluid
+                      />
+                    </Form.Group>
+                  </Grid.Column>
+                  <Grid.Column>
                     <div className="text-box">
-                      <h5>Recipient's Information</h5>
+                    <h5>Recipient's Information</h5>
                       <p><text>
                         This person will receive the text that informs them that someone in their life
                         wants to have a hard conversation.
                       </text></p>
                     </div>
-                    <Form.Input
-                      name="ffName"
-                      label="Name of Friend, Family, or Loved One "
-                      validations="isWords"
-                      placeholder="Jane Doe"
-                      required
-                      onChange={e => this.changeHandler(e)}
-                      fluid
-                    />
-                    <Form.Input
-                      name="ffPhoneNum"
-                      label="Phone Number of Friend, Family, or Loved One"
-                      validations="isNumeric"
-                      required
-                      onChange={e => this.changeHandler(e)}
-                      fluid
-                    />
-                  </Form.Group>
-                </Grid.Column>
-                <Divider vertical>And</Divider>
-                <div className="agree-submit">
+                    <Form.Group grouped>
+                      <Form.Input
+                        name="ffName"
+                        label="Recipient's Name "
+                        validations="isWords"
+                        required
+                        onChange={e => this.changeHandler(e)}
+                        fluid
+                      />
+                      <Form.Input
+                        name="ffPhoneNum"
+                        label="Recipient's Phone Number "
+                        validations="isNumeric"
+                        required
+                        onChange={e => this.changeHandler(e)}
+                        fluid
+                      />
+                    </Form.Group>
+                  </Grid.Column>
+                </Grid>
+                <Container className="agree-submit">
                   <Checkbox
                     name="survivorLiability"
                     label={<label>I accept the terms of service</label>}
                     validations="isTrue"
                   />
                   <Form.Button type="submit">Send Text</Form.Button>
-                </div>
+                </Container>
               </Form>
-            </Grid>
+            </Container>
           </Segment>
         </div>
       </div>

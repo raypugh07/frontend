@@ -55,15 +55,15 @@
 .float-plane .float-box {
   /* height: 400px; */
   width: 700px;
-  padding: 40px;
+  padding: 20px 30px;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
 }
 
 .float-plane .float-box .modal-box {
   width: 100%;
+  margin-bottom: 20px;
   padding: 0 10px 10px;
   display: flex;
   justify-content: center;
@@ -71,33 +71,19 @@
 
 .float-plane .float-box .content-box {
   width: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
-.float-pox .content-box .half-box {
-  height: 100%;
-  min-width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.content-box .half-box .text-box {
+.float-box .content-box .text-box {
+  height: 150px;
   width: 100%;
   margin-bottom: 10px;
   text-align: justify;
 }
 
-.content-box .half-box .divider {
-  width: 1px;
-  margin: 0 12px;
-  border-left: 1px solid black;
-}
 
 .float-plane .float-box .agree-submit {
   width: 100%;
+  margin-top: 20px;
   padding: 10px 10px 0;
   display: flex;
   flex-direction: column;
