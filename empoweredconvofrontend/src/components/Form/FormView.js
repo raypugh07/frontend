@@ -9,7 +9,7 @@ import {
   Dropdown,
   Select,
 } from 'formsy-semantic-ui-react';
-import { Button, Container, Modal, Segment, Label, Grid, Divider, Input as SInput, Loader } from 'semantic-ui-react';
+import { Button, Container, Modal, Segment, Label, Grid, Divider, Input as SInput, Form as SForm, Loader } from 'semantic-ui-react';
 import TOS from './TOS';
 import './Form.css';
 
@@ -68,24 +68,29 @@ class FormView extends React.Component {
   render() {
     let securityView =
         <div className="security-container">
-          <p>Please enter your provided App Key to continue</p>
+          <p className="security-header">Please enter your provided App Key to continue</p>
           {this.state.isVerifying ? <> <Loader active inverted size="large"> Verifying... </Loader> </> :
           <>
-          <SInput
-            className="security-input"
-            name="appKey"
-            label="App Key"
-            type="password"
-            onChange={e => this.changeKey(e)}
-          />
-          <div className="button-container">
-            <Button
-              className="submit-key"
-              onClick={(e) => this.submitKey(e)}
-            >
-              Submit
-            </Button>
-          </div> 
+            <SForm onSubmit={e => this.submitKey(e)}>
+              <SInput
+                className="security-input"
+                name="appKey"
+                label="App Key"
+                type="password"
+                onChange={e => this.changeKey(e)}
+              />
+            </SForm>
+            <div className="button-container">
+              <Button
+                type="submit"
+                disabled={!this.state.appKey ? true : false}
+                size="large"
+                toggle
+                tabIndex={0}
+              >
+                Submit
+              </Button>
+            </div>
           </>}
         </div>
     let formView = 

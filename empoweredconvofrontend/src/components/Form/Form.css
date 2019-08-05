@@ -105,8 +105,7 @@
   align-content: center;
 }
 
-.security-container p {
-  margin-bottom: 70px;
+.security-header {
   font-size: 1.6rem;
   text-align: center;
   font-family: Avenir;
@@ -121,16 +120,18 @@
   justify-content: center;
 }
 
-.submit-key {
-  width: 8vw;
-  height: 35px;
-  vertical-align: top;
-}
-
 .ui.text.loader {
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
 .security-input {
-  width: 50%;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.security-container form {
+  width: 100%;
+  padding: 0 30vw 0 23vw;
+  display: flex;
+  justify-content: center;
 }
