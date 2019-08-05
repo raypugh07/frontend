@@ -9,7 +9,7 @@ import {
   Dropdown,
   Select,
 } from 'formsy-semantic-ui-react';
-import { Button, Container, Modal, Segment, Label, Grid, Divider } from 'semantic-ui-react';
+import { Button, Container, Modal, Segment, Label, Grid, Divider, Input as SInput, Loader } from 'semantic-ui-react';
 import TOS from './TOS';
 import './Form.css';
 
@@ -21,6 +21,9 @@ class FormView extends React.Component {
       ffPhoneNum: '',
     },
     isModalOpen: false,
+    isVerified: false,
+    isVerifying: false,
+    appKey: ''
   };
 
   submitHandler = e => {
@@ -47,9 +50,46 @@ class FormView extends React.Component {
     this.setState({ isModalOpen: !this.state.isModalOpen });
   };
 
+  changeKey = e => {
+    this.setState({ appKey: e.target.value });
+  }
+
+  submitKey = e => {
+    let keys = [ "northwestern", "stanford", "michigan" ];
+    keys.includes(this.state.appKey) ?
+    (function(env) {
+      env.setState({ isVerifying: true })
+      setTimeout(() => env.setState({isVerified: true}), 2000)
+    })(this)
+    : alert("Invalid key")
+    
+  }
+
   render() {
-    return (
-      <div className="stage">
+    let securityView =
+        <div className="security-container">
+          <p>Please enter your provided App Key to continue</p>
+          {this.state.isVerifying ? <> <Loader active inverted size="large"> Verifying... </Loader> </> :
+          <>
+          <SInput
+            className="security-input"
+            name="appKey"
+            label="App Key"
+            type="password"
+            onChange={e => this.changeKey(e)}
+          />
+          <div className="button-container">
+            <Button
+              className="submit-key"
+              onClick={(e) => this.submitKey(e)}
+            >
+              Submit
+            </Button>
+          </div> 
+          </>}
+        </div>
+    let formView = 
+        <div className="stage">
         <div className="stage-left">
           <div className="stage-title">
             <h1>Almost there . . .</h1>
@@ -147,7 +187,11 @@ class FormView extends React.Component {
           </Segment>
         </div>
       </div>
-    );
+    return (
+      <>
+      {!this.state.isVerified ? securityView : formView}
+      </>
+      );
   }
 }
 
