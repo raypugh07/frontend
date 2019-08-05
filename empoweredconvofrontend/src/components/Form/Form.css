@@ -130,8 +130,7 @@
 }
 
 .security-container form {
-  width: 100%;
-  padding: 0 30vw 0 23vw;
+  width: 50%;
   display: flex;
   justify-content: center;
 }

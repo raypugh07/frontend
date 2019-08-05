@@ -77,6 +77,7 @@ class FormView extends React.Component {
                 name="appKey"
                 label="App Key"
                 type="password"
+                fluid
                 onChange={e => this.changeKey(e)}
               />
             </SForm>
