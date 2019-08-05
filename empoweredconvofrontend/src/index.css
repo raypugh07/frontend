@@ -9,6 +9,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: Avenir;
+  src: url('./assets/avenir-lt-std-cufonfonts-webfont/AvenirLTStd-Book.woff');
+}
+
+@font-face {
+  font-family: Avenir-Med;
+  src: url('./assets/avenir-lt-std-cufonfonts-webfont/AvenirLTStd-Medium.woff');
+}
+
+@font-face {
+  font-family: Avenir-Hev;
+  src: url('./assets/avenir-lt-std-cufonfonts-webfont/AvenirLTStd-Heavy.woff');
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -17,7 +32,7 @@ code {
 h1, h2, h3, h4, h5, h6 {
   margin: 4px 0 0 0;
   color: #2e2f38;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Avenir-Med';
 }
 
 h1 {
@@ -59,7 +74,7 @@ h6 {
 p {
   margin: 4px 0;
   color: #2e2f38;
-  font-family: 'Nuniuto', sans-serif;
+  font-family: 'Avenir';
   text-align: justify;
   font-size: 20px;
   font-weight: 300;
@@ -69,7 +84,7 @@ p {
 text {
   margin: 4px 0;
   color: #2e2f38;
-  font-family: 'Nuniuto', sans-serif;
+  font-family: 'Avenir';
   text-align: justify;
   font-size: 16px;
   font-weight: 300;
