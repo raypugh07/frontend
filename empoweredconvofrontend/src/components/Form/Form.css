@@ -89,3 +89,49 @@
   justify-content: center;
   align-items: center;
 }
+
+@font-face {
+  font-family: Avenir;
+  src: url(../../assets/AvenirLTStd-Book.otf);
+}
+
+.security-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.security-header {
+  font-size: 1.6rem;
+  text-align: center;
+  font-family: Avenir;
+  width: 100%;
+  color: white;
+  position: absolute;
+  top: 200px;
+}
+
+.button-container {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ui.text.loader {
+  margin-top: 80px;
+}
+
+.security-input {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.security-container form {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}

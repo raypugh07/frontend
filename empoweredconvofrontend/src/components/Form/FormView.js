@@ -2,7 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { initializeConvo } from '../../actions/initConvoActions';
 import { Form, Checkbox } from 'formsy-semantic-ui-react';
-import { Button, Container, Modal, Segment, Grid } from 'semantic-ui-react';
+import {
+  Button, Container, Modal, Segment, Grid,
+  Input as SInput,
+  Form as SForm, Loader
+} from 'semantic-ui-react';
 import TOS from './TOS';
 import './Form.css';
 
@@ -14,6 +18,9 @@ class FormView extends React.Component {
       ffPhoneNum: '',
     },
     isModalOpen: false,
+    isVerified: false,
+    isVerifying: false,
+    appKey: ''
   };
 
   submitHandler = e => {
@@ -40,9 +47,52 @@ class FormView extends React.Component {
     this.setState({ isModalOpen: !this.state.isModalOpen });
   };
 
+  changeKey = e => {
+    this.setState({ appKey: e.target.value });
+  }
+
+  submitKey = e => {
+    let keys = [ "northwestern", "stanford", "michigan" ];
+    keys.includes(this.state.appKey) ?
+    (function(env) {
+      env.setState({ isVerifying: true })
+      setTimeout(() => env.setState({isVerified: true}), 2000)
+    })(this)
+    : alert("Invalid key")
+    
+  }
+
   render() {
-    return (
-      <div className="stage">
+    let securityView =
+        <div className="security-container">
+          <p className="security-header">Please enter your provided App Key to continue</p>
+          {this.state.isVerifying ? <> <Loader active inverted size="large"> Verifying... </Loader> </> :
+          <>
+            <SForm onSubmit={e => this.submitKey(e)}>
+              <SInput
+                className="security-input"
+                name="appKey"
+                label="App Key"
+                type="password"
+                fluid
+                onChange={e => this.changeKey(e)}
+              />
+            </SForm>
+            <div className="button-container">
+              <Button
+                type="submit"
+                disabled={!this.state.appKey ? true : false}
+                size="large"
+                toggle
+                tabIndex={0}
+              >
+                Submit
+              </Button>
+            </div>
+          </>}
+        </div>
+    let formView = 
+        <div className="stage">
         <div className="stage-left">
           <div className="stage-title">
             <h1>Almost there . . .</h1>
@@ -140,7 +190,11 @@ class FormView extends React.Component {
           </Segment>
         </div>
       </div>
-    );
+    return (
+      <>
+      {!this.state.isVerified ? securityView : formView}
+      </>
+      );
   }
 }
 
