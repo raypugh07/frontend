@@ -79,6 +79,11 @@ class Landing extends React.Component {
                 src="assets/cta/katherine-hanlon-bHhEJAXyFOg-unsplash.png"
                 alt="cta video"
               />
+              <img
+                className="ctaVideoMobile"
+                src="assets/cta/mobile/katherine-hanlon-bHhEJAXyFOg-unsplash.png"
+                alt="cta video"
+              />
 
               <img
                 className="btnPlay"

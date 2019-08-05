@@ -7,8 +7,8 @@ import './App.css';
 import Landing from "./components/LandingPage/Landing.js";
 import UsersList from './components/UsersList/UsersList';
 import { Header } from 'semantic-ui-react';
-import Bar from './components/NavBar/Bar';
-import Footer from './components/Footer/Footer';
+// import Bar from './components/NavBar/Bar';
+// import Footer from './components/Footer/Footer';
 
 class App extends Component {
   state = {
@@ -40,9 +40,9 @@ class App extends Component {
         
 
 
-          <Bar/>
+          {/* <Bar/> */}
           <Landing/>
-          <Footer/>
+          {/* <Footer/> */}
 
 
       </Router>
