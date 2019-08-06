@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+.about-page{
+    /*border:solid blue;*/
+    margin:auto;
+    background-image: url("Background.png");
+    height: 1918px;	width: 1440px;
+    padding-top:130px;
+}
+
+@media (max-width:500px){
+    .about-page{
+        height: 1930px;	width: 100%;
+       /* border:solid red;*/
+    }
+
+
+}
+
+.about-text{
+  /*  border:solid pink;*/
+    display:flex;
+    flex-direction: column;
+    padding-left:18%;
+  
+}
+
+@media (max-width:500px){
+    .about-text{
+       padding:0px;
+       width:100%;
+    }
+
+
+}
+
+
+.about-page p:first-child{
+  /*  border:solid red;*/
+   /* margin-left:25%;*/
+
+   /* height: 55px;*/	width: 276px;	color: #2E2F38;	font-family: 'Nunito', sans-serif;	font-size: 40px;	font-weight: 500;	line-height: 55px;
+}
+
+
+
+.about-page p:nth-child(2){
+    /*border:solid red;*/
+    text-align: left;
+    /*margin-left:25%;*/
+
+
+  /* height: 81px;*/	width: 474px;	color: #2E2F38;	font-family: 'Nunito', sans-serif;	font-size: 20px;	font-weight: 300;	line-height: 27px;
+
+}
+
+.about-page p:nth-child(3){
+   /* border:solid red;*/
+    text-align: left;
+    /*margin-left:25%;*/
+
+
+
+   /* height: 108px;*/	width: 474px;	color: #2E2F38;	font-family: 'Nunito', sans-serif;	font-size: 20px;	font-weight: 300;	line-height: 27px;
+
+}
+
+@media (max-width:500px){
+    .about-page p:first-child{
+       
+       /* border:solid blue;*/
+        padding-left:0px;
+        margin-left:10px;
+     }
+    .about-page p:nth-child(2){
+       width:90%;
+      /* border:solid blue;*/
+       padding-left:15px;
+       margin:auto;
+    }
+    .about-page p:nth-child(3){
+        width:90%;
+        /*border:solid blue;*/
+        padding-left:15px;
+        margin:auto;
+        margin-top:15px;
+
+    }
+
+
+}
+
+.aboutbtn{
+    /*border:solid red;*/
+    cursor: pointer;
+    margin-left:23%;
+    height: 25px;	width: 107.34px;	color: #FFFFFF;	font-family: 'Nunito', sans-serif;	font-size: 18px;	font-weight: 500;	line-height: 25px;
+    height: 49px;	width: 163px;	border-radius: 5px;	background-color: #2E2F38;	box-shadow: 0 15px 20px -10px
+}
+
+@media (max-width:500px){
+    .aboutbtn{
+        margin-left:50%;
+        margin-top:15px;
+
+
+    }
+
+
+}
