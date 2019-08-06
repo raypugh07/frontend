@@ -209,10 +209,15 @@ code {
 
 .ctaVideoContainer {
   position: relative;
+  /* border: 1px solid red; */
 }
 
 .ctaVideo {
   width: 769px;
+}
+
+.ctaVideoMobile {
+  display: none;
 }
 
 .btnPlay {
@@ -297,7 +302,6 @@ code {
     margin: 200px 0 0 0;
     display: flex;
     flex-direction: column;
-    /* border: 1px solid red; */
   }
 
   .cta {
@@ -317,7 +321,7 @@ code {
 
   .whatWeDoContainer {
     margin: 0 auto;
-    padding: 170px 0 100px 0;
+    padding: 170px 0 0 0;
   }
 
   .whatWeDoImg {
@@ -357,7 +361,6 @@ code {
   .mobileListItems {
     flex-direction: column;
     background-color: #24b4a5;
-    /* border: 1px solid red; */
     padding: 0 0 50px 0;
   }
 
@@ -375,5 +378,24 @@ code {
 
   .btnExplore {
     margin: 20px 0 10px 250px;
+  }
+  .ctaVideoContainer {
+    height: 328px;
+    margin: 60px 0;
+  }
+
+  .ctaVideo {
+    display: none;
+  }
+
+  .ctaVideoMobile {
+    display: block;
+    width: 480px;
+  }
+
+  .btnPlay {
+    position: absolute;
+    top: 35%;
+    left: 40%;
   }
 }
