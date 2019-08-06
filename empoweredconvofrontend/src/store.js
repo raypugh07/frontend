@@ -10,9 +10,8 @@ const store = () => {
       rootReducer,
       composeWithDevTools(applyMiddleware(thunk, logger)),
     );
-  } else {
-    return createStore(rootReducer, applyMiddleware(thunk));
   }
+  return createStore(rootReducer, applyMiddleware(thunk));
 };
 
 export default store;

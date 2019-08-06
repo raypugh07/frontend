@@ -1,6 +1,9 @@
 .App {
-  text-align: center;
+  background-color: #24b4a5;
+}
 
+.App-Landing {
+  /* background-color: #24b4a5; */
 }
 
 .App-logo {
@@ -24,7 +27,11 @@
   color: #61dafb;
 }
 
-.empowered-conversation-logo-md {	
-  height: 49px;	
-  width: 77px;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
