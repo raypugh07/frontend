@@ -2,6 +2,10 @@
   background-color: #24b4a5;
 }
 
+.App-Landing {
+  /* background-color: #24b4a5; */
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;

@@ -7,6 +7,7 @@ import './App.css';
 import UsersList from './components/UsersList/UsersList';
 import { Header } from 'semantic-ui-react';
 import FormView from './components/Form/FormView';
+import Landing from './components/LandingPage/Landing';
 
 class App extends Component {
   state = {
@@ -21,10 +22,11 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          {/* <Header as="h1">Empowered Conversations</Header> */}
-          {/* <UsersList /> */}
-          <FormView />
+          <Route exact path="/form" component={FormView} />
         </div>
+        <div className="App-Landing">
+            <Route exact path="/landing" component={Landing} />
+          </div>
       </Router>
     );
   }
