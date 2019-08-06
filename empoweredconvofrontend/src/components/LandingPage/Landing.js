@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './Landing.css';
 
@@ -26,6 +27,7 @@ class Landing extends React.Component {
                 alt="survivor activated tool"
               />
             </div>
+
             <img
               className="btnExplore"
               src="assets/intro/explore button.png"
