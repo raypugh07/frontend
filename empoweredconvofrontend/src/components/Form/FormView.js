@@ -1,15 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { initializeConvo } from '../../actions/initConvoActions';
+import { Form, Checkbox } from 'formsy-semantic-ui-react';
 import {
-  Form,
-  Input,
-  TextArea,
-  Checkbox,
-  Dropdown,
-  Select,
-} from 'formsy-semantic-ui-react';
-import { Button, Container, Modal, Segment, Label, Grid, Divider, Input as SInput, Form as SForm, Loader } from 'semantic-ui-react';
+  Button, Container, Modal, Segment, Grid,
+  Input as SInput,
+  Form as SForm, Loader
+} from 'semantic-ui-react';
 import TOS from './TOS';
 import './Form.css';
 

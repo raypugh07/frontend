@@ -1,6 +1,6 @@
 /* BACKGROUND */
 .stage {
-  height: 900px;
+  height: 1000px;
   width: 100%;
 }
 
@@ -18,7 +18,7 @@
 
 .stage-left .stage-title {
   width: 440px;
-  margin: 120px 0 40px 50%;
+  margin: 200px 0 40px 50%;
   padding-right: 50px;
   position: relative;
   z-index: 2;
@@ -44,7 +44,7 @@
 .float-plane {
   min-height: calc(100vh - 95px);
   min-width: 100%;
-  padding-top: 280px;
+  padding-top: 385px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,7 +53,6 @@
 }
 
 .float-plane .float-box {
-  /* height: 400px; */
   width: 700px;
   padding: 20px 30px;
   display: flex;
