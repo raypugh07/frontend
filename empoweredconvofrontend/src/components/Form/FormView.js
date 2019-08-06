@@ -16,9 +16,9 @@ import './Form.css';
 class FormView extends React.Component {
   state = {
     convoRequest: {
-      survivorPhoneNum: '',
-      ffName: '',
-      ffPhoneNum: '',
+      survivornumber: '',
+      ffname: '',
+      ffnumber: '',
     },
     isModalOpen: false,
     isVerified: false,
@@ -136,14 +136,7 @@ class FormView extends React.Component {
                     </div>
                     <Form.Group grouped>
                       <Form.Input
-                        name="ffName"
-                        label="Your Name"
-                        validations="isWords"
-                        onChange={e => this.changeHandler(e)}
-                        fluid
-                      />
-                      <Form.Input
-                        name="survivorPhoneNum"
+                        name="survivornumber"
                         label="Your Phone Number "
                         validations="isNumeric"
                         required
@@ -162,7 +155,7 @@ class FormView extends React.Component {
                     </div>
                     <Form.Group grouped>
                       <Form.Input
-                        name="ffName"
+                        name="ffname"
                         label="Recipient's Name "
                         validations="isWords"
                         required
@@ -170,7 +163,7 @@ class FormView extends React.Component {
                         fluid
                       />
                       <Form.Input
-                        name="ffPhoneNum"
+                        name="ffnumber"
                         label="Recipient's Phone Number "
                         validations="isNumeric"
                         required
