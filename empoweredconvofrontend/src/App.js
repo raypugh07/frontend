@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { login, register } from './actions/authActions';
-import { getUsers } from './actions/getUsers';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
-import UsersList from './components/UsersList/UsersList';
 import { Header } from 'semantic-ui-react';
 import FormView from './components/Form/FormView';
 import Landing from './components/LandingPage/Landing';
+import About from './components/About/About';
+import Nav from './components/NavBar/Bar';
+import Footer from './components/Footer/Footer';
+import Video from './components/Video/Video';
 
 class App extends Component {
   state = {
@@ -21,12 +23,22 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
-          <Route exact path="/form" component={FormView} />
-        </div>
-        <div className="App-Landing">
-            <Route exact path="/landing" component={Landing} />
+        <Nav />
+        <>
+          <div className="App">
+            <Route exact path="/form" component={FormView} />
           </div>
+          <div className="App-Landing">
+            <Route exact path="/" component={Landing} />
+          </div>
+          <div className='App-About'>
+            <Route exact path="/about" component={About} />
+          </div>
+          <div>
+            <Route exact path="/learn" render={(props) => <Video size="full"/>} />
+          </div>
+        </>
+        <Footer />
       </Router>
     );
   }
@@ -34,5 +46,5 @@ class App extends Component {
 
 export default connect(
   null,
-  { register, login, getUsers },
+  { register, login,  },
 )(App);
