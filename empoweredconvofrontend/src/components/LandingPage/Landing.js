@@ -7,6 +7,7 @@ class Landing extends React.Component {
   render() {
     return (
       <div className="landing">
+        
         <img
           className="landingBackground"
           src="assets/Background new.png"
@@ -28,11 +29,13 @@ class Landing extends React.Component {
               />
             </div>
 
-            <img
-              className="btnExplore"
-              src="assets/intro/explore button.png"
-              alt="explore"
-            />
+            <Link to="/form">
+              <img
+                className="btnExplore"
+                src="assets/intro/explore button.png"
+                alt="explore"
+              />
+            </Link>
           </div>
 
           <div className="introMobile">
@@ -51,11 +54,13 @@ class Landing extends React.Component {
                 alt="survivor activated tool"
               />
             </div>
-            <img
-              className="btnExplore"
-              src="assets/intro/mobile/explore button.png"
-              alt="explore"
-            />
+            <Link to="/form">
+              <img
+                className="btnExplore"
+                src="assets/intro/mobile/explore button.png"
+                alt="explore"
+              />
+            </Link>
           </div>
         </section>
 
@@ -107,11 +112,13 @@ class Landing extends React.Component {
                 alt="our tool"
               />
 
-              <img
-                className="btnCta"
-                src="assets/cta/Use The Tool Button.png"
-                alt="use tool"
-              />
+              <Link to="/form">
+                <img
+                  className="btnCta"
+                  src="assets/cta/Use The Tool Button.png"
+                  alt="use tool"
+                />
+              </Link>
             </div>
           </div>
 
