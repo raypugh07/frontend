@@ -38,7 +38,7 @@ class App extends Component {
             <Route exact path="/learn" render={(props) => <Video {...props} size="full"/>} />
           </div>
           <div>
-            <Route exact path="/ff/learn/:id" render={(props) => <Video {...props} size="full" />} />
+            <Route exact path="/ff/learn/" render={(props) => <Video {...props} size="full"/>} />
           </div>
         </>
         <Footer />
