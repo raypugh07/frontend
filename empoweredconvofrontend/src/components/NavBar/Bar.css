@@ -7,6 +7,10 @@
   src: url(../../assets/AvenirLTStd-Roman.otf);
 }
 
+.btnCta{
+  margin: 0 10px 15px 0;
+}
+
 .nav-bar {
   width: 100%;
   height: 69px;

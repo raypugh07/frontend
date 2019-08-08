@@ -19,7 +19,14 @@ export default function Bar(){
       <nav className="nav-front">
         <Link className="link-dec" to='/about'>About</Link>
         <Link className="link-dec" to='/learn'>Learn</Link>
-        <Link to='/form' className="nav-button">Use The Tool</Link>
+        {/* <Link to='/form' className="nav-button">Use The Tool</Link> */}
+        <Link to="/form">
+                <img
+                  className="btnCta"
+                  src="assets/cta/Use The Tool Button.png"
+                  alt="use tool"
+                />
+              </Link>
       </nav>
       
       {/* HAMBURGER MENUS */}
