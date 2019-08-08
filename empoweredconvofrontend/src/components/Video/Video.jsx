@@ -1,32 +1,49 @@
 import React from 'react';
-import ReactPlayer from 'react-player';
+import YouTubePlayer from 'react-player/lib/players/YouTube';
+
 import axios from 'axios';
 import './Video.css';
 
-const Video = (props) => {
-    const convoReq = props.location.search.split('').splice(5, props.location.search.length-1).join('');
-    console.log(convoReq);
-    let hasSent = false;
-    const finishConvo = ({ played }) => {
-        if(played >= 0.9 && !hasSent) {
-            axios.delete(`https://empoweredconversation.herokuapp.com/conversations/finished/${convoReq}`).then(res => {
-                console.log(res, 'from res');
-            }).catch(err => {
-                console.log(err, 'from err');
-            })
-            hasSent = true;
-        }
-        console.log(played);
-    }
+const Video = props => {
+  //   const convoReq = props.match.params.id;
+  const convoReq = props.location.search
+    .split('')
+    .splice(5, props.location.search.length - 1)
+    .join('');
 
-    return (
-        <div className={"video-" + props.size}>
-            <ReactPlayer className="video" url="https://www.youtube.com/watch?v=bBrgb-uLtlE" 
-                controls
-                onProgress={finishConvo}
-            />
-        </div>
-    );
-}
+  let hasSent = false;
+  const finishConvo = ({ played }) => {
+    if (props.fromConvo && !hasSent && played >= 0.9) {
+      axios
+        .delete(
+          `https://empoweredconversation.herokuapp.com/conversations/finished/${convoReq}`,
+        )
+        .then(res => {
+          console.log(res, 'from res', 'convo finished');
+        })
+        .catch(err => {
+          console.log(err, 'from err');
+        });
+      hasSent = true;
+    }
+    // console.log(played);
+  };
+
+  return (
+    <div className={'video-' + props.size}>
+      <YouTubePlayer
+        className="video"
+        url="https://www.youtube.com/watch?v=bBrgb-uLtlE"
+        controls={true}
+        onProgress={finishConvo}
+        config={{
+          youtube: {
+            playerVars: { modestbranding: 1 },
+          },
+        }}
+      />
+    </div>
+  );
+};
 
 export default Video;
