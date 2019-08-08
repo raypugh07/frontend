@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import EmLogo from '../../assets/Medium/EmpoweredConversation-Logo-Md-RGB.png';
 import './Bar.css';
+import ctaBtn from './use_the_tool_btn.png';
 
 export default function Bar(){
   return(
@@ -23,7 +24,7 @@ export default function Bar(){
         <Link to="/form">
                 <img
                   className="btnCta"
-                  src="assets/cta/Use The Tool Button.png"
+                  src={ctaBtn}
                   alt="use tool"
                 />
               </Link>
