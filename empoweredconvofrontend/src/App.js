@@ -35,7 +35,10 @@ class App extends Component {
             <Route exact path="/about" component={About} />
           </div>
           <div>
-            <Route exact path="/learn" render={(props) => <Video size="full"/>} />
+            <Route exact path="/learn" render={(props) => <Video {...props} size="full"/>} />
+          </div>
+          <div>
+            <Route exact path="/ff/learn/:id" render={(props) => <Video {...props} size="full" />} />
           </div>
         </>
         <Footer />
