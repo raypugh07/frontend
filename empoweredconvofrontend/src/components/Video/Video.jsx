@@ -4,7 +4,8 @@ import axios from 'axios';
 import './Video.css';
 
 const Video = (props) => {
-    const convoReq = props.match.params.id;
+    const convoReq = props.location.search.split('').splice(5, props.location.search.length-1).join('');
+    console.log(convoReq);
     let hasSent = false;
     const finishConvo = ({ played }) => {
         if(played >= 0.9 && !hasSent) {
