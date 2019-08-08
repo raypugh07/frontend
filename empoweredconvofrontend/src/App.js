@@ -31,14 +31,26 @@ class App extends Component {
           <div className="App-Landing">
             <Route exact path="/" component={Landing} />
           </div>
-          <div className='App-About'>
+          <div className="App-About">
             <Route exact path="/about" component={About} />
           </div>
           <div>
-            <Route exact path="/learn" render={(props) => <Video {...props} size="full"/>} />
+            <Route
+              exact
+              path="/learn"
+              render={props => (
+                <Video {...props} fromConvo={false} size="full" />
+              )}
+            />
           </div>
           <div>
-            <Route exact path="/ff/learn/" render={(props) => <Video {...props} size="full"/>} />
+            <Route
+              exact
+              path="/ff/learn/"
+              render={props => (
+                <Video {...props} fromConvo={true} size="full" />
+              )}
+            />
           </div>
         </>
         <Footer />
@@ -49,5 +61,5 @@ class App extends Component {
 
 export default connect(
   null,
-  { register, login,  },
+  { register, login },
 )(App);

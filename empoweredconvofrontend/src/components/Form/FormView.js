@@ -3,9 +3,14 @@ import { connect } from 'react-redux';
 import { initializeConvo } from '../../actions/initConvoActions';
 import { Form, Checkbox } from 'formsy-semantic-ui-react';
 import {
-  Button, Container, Modal, Segment, Grid,
+  Button,
+  Container,
+  Modal,
+  Segment,
+  Grid,
   Input as SInput,
-  Form as SForm, Loader
+  Form as SForm,
+  Loader,
 } from 'semantic-ui-react';
 import TOS from './TOS';
 import './Form.css';
@@ -21,29 +26,24 @@ class FormView extends React.Component {
     isModal2Open: false,
     isVerified: false,
     isVerifying: false,
-    appKey: ''
+    appKey: '',
   };
 
   submitHandler = e => {
-    console.log('send text button hit');
-    console.log('from submit', this.state.convoRequest.survivorPhoneNum);
-    console.log('from submit', this.state.convoRequest.ffName);
-    console.log('from submit', this.state.convoRequest.ffPhoneNum);
+    // console.log('send text button hit');
+    // console.log('from submit', this.state.convoRequest.survivorPhoneNum);
+    // console.log('from submit', this.state.convoRequest.ffName);
+    // console.log('from submit', this.state.convoRequest.ffPhoneNum);
     this.props.initializeConvo(this.state.convoRequest);
     // this.handleModal2Open();
     let clearedReq = {
       survivornumber: '',
       ffname: '',
       ffnumber: '',
-    }
-    this.setState({convoRequest: clearedReq
-    }, () => 
-      this.handleModal2Open(), 
-      
-    )
-
-} // <- Is it this random bracket, here?
-// we good
+    };
+    this.setState({ convoRequest: clearedReq }, () => this.handleModal2Open());
+  }; // <- Is it this random bracket, here?
+  // we good
 
   changeHandler({ target }) {
     this.setState(
@@ -53,7 +53,7 @@ class FormView extends React.Component {
           [target.name]: target.value,
         },
       },
-      () => console.log(this.state.convoRequest, 'from change'),
+      // () => console.log(this.state.convoRequest, 'from change'),
     );
   }
 
@@ -63,28 +63,37 @@ class FormView extends React.Component {
 
   handleModal2Open = () => {
     this.setState({ isModal2Open: !this.state.isModal2Open });
-  }
+  };
 
   changeKey = e => {
     this.setState({ appKey: e.target.value });
-  }
+  };
 
   submitKey = e => {
-    let keys = [ "northwestern", "stanford", "michigan" ];
-    keys.includes(this.state.appKey) ?
-    (function(env) {
-      env.setState({ isVerifying: true })
-      setTimeout(() => env.setState({isVerified: true}), 2000)
-    })(this)
-    : alert("Invalid key")
-    
-  }
+    let keys = ['northwestern', 'stanford', 'michigan'];
+    keys.includes(this.state.appKey)
+      ? (function(env) {
+          env.setState({ isVerifying: true });
+          setTimeout(() => env.setState({ isVerified: true }), 2000);
+        })(this)
+      : alert('Invalid key');
+  };
 
   render() {
-    let securityView =
-        <div className="security-container">
-          <p className="security-header">Please enter your provided App Key to continue</p>
-          {this.state.isVerifying ? <> <Loader active size="massive"> Verifying... </Loader> </> :
+    let securityView = (
+      <div className="security-container">
+        <p className="security-header">
+          Please enter your provided App Key to continue
+        </p>
+        {this.state.isVerifying ? (
+          <>
+            {' '}
+            <Loader active size="massive">
+              {' '}
+              Verifying...{' '}
+            </Loader>{' '}
+          </>
+        ) : (
           <>
             <SForm onSubmit={e => this.submitKey(e)}>
               <SInput
@@ -103,16 +112,18 @@ class FormView extends React.Component {
                 disabled={!this.state.appKey ? true : false}
                 size="huge"
                 onClick={e => this.submitKey(e)}
-                style={{backgroundColor: "#2E2F38", color: "white"}}
+                style={{ backgroundColor: '#2E2F38', color: 'white' }}
                 toggle
                 tabIndex={0}
               >
                 Submit
               </Button>
             </div>
-          </>}
-        </div>
-    let formView = 
+          </>
+        )}
+      </div>
+    );
+    let formView = (
       <div className="stage">
         <div className="stage-left">
           <div className="stage-title">
@@ -120,7 +131,7 @@ class FormView extends React.Component {
             <p>Placeholder; explanation on how to begin.</p>
             <p className="required">* Required</p>
           </div>
-          <div className="lime-card"/>
+          <div className="lime-card" />
         </div>
         <div className="float-plane">
           <Segment className="float-box">
@@ -129,7 +140,7 @@ class FormView extends React.Component {
                 trigger={
                   <Button
                     size="huge"
-                    style={{backgroundColor: "#2E2F38", color: "white"}}
+                    style={{ backgroundColor: '#2E2F38', color: 'white' }}
                     content={'Terms of Service'}
                     onClick={this.handleModal1Open}
                   />
@@ -145,14 +156,15 @@ class FormView extends React.Component {
             </Container>
             <Container className="content-box">
               {/* <Form onValidSubmit={() => this.submitHandler()} size={"huge"}> */}
-              <Form onValidSubmit={() => this.handleModal2Open()} size={"huge"}>
+              <Form onValidSubmit={() => this.handleModal2Open()} size={'huge'}>
                 <Grid columns={2} divided>
                   <Grid.Column>
                     <div className="text-box">
                       <h5>Your Information</h5>
                       <p>
-                        Don't worry! We'll keep you anonymous, no matter what! We just need your cell
-                        phone number to give you an update when the recipient gets the text.
+                        Don't worry! We'll keep you anonymous, no matter what!
+                        We just need your cell phone number to give you an
+                        update when the recipient gets the text.
                       </p>
                     </div>
                     <Form.Group grouped>
@@ -169,10 +181,10 @@ class FormView extends React.Component {
                   </Grid.Column>
                   <Grid.Column>
                     <div className="text-box">
-                    <h5>Recipient's Information</h5>
+                      <h5>Recipient's Information</h5>
                       <p>
-                        This person will receive the text that informs them that someone in their life
-                        wants to have a hard conversation.
+                        This person will receive the text that informs them that
+                        someone in their life wants to have a hard conversation.
                       </p>
                     </div>
                     <Form.Group grouped>
@@ -211,28 +223,34 @@ class FormView extends React.Component {
                     trigger={
                       <Button
                         size="huge"
-                        style={{backgroundColor: "#2E2F38", color: "white"}}
+                        style={{ backgroundColor: '#2E2F38', color: 'white' }}
                         content={'Preview Text'}
                         onValidSubmit={() => this.handleModal2Open()}
                       />
-                      }
+                    }
                     open={this.state.isModal2Open}
                     onClose={this.handleModal2Open}
                   >
-                  <Modal.Header>
-                    <div className="form-submit">
-                      <text>Text Preview</text>
-                      <Button
-                        style={{backgroundColor: "#2E2F38", color: "white"}}
-                        size="large"
-                        onClick={() => this.submitHandler()}>Send Text</Button>
-                    </div>
-                  </Modal.Header>
-                  <Modal.Content>
-                    <div className="preview-container">
-                      <img className="preview-img" src="assets/messagepreview.png"/>
-                    </div>
-                  </Modal.Content>
+                    <Modal.Header>
+                      <div className="form-submit">
+                        <text>Text Preview</text>
+                        <Button
+                          style={{ backgroundColor: '#2E2F38', color: 'white' }}
+                          size="large"
+                          onClick={() => this.submitHandler()}
+                        >
+                          Send Text
+                        </Button>
+                      </div>
+                    </Modal.Header>
+                    <Modal.Content>
+                      <div className="preview-container">
+                        <img
+                          className="preview-img"
+                          src="assets/messagepreview.png"
+                        />
+                      </div>
+                    </Modal.Content>
                   </Modal>
                 </Container>
               </Form>
@@ -240,11 +258,8 @@ class FormView extends React.Component {
           </Segment>
         </div>
       </div>
-    return (
-      <>
-        {!this.state.isVerified ? securityView : formView}
-      </>
-      );
+    );
+    return <>{!this.state.isVerified ? securityView : formView}</>;
   }
 }
 
