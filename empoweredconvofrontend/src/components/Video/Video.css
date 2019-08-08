@@ -1,0 +1,15 @@
+.video-full {
+    height: 450px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width: 769px) {
+    .video-full {
+        width: 440px;
+        margin: 0 auto;
+    }
+}
+

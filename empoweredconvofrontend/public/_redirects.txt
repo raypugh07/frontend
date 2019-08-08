@@ -1,0 +1,3 @@
+https://empconvo.netlify.com/* https://empoweredconvo.com/:splat 301!
+https://empconvo-staging-1.netlify.com/* https://staging.empoweredconvo.com/:splat 301!
+/*    /index.html   200
