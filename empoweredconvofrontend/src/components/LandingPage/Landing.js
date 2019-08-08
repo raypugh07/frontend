@@ -7,7 +7,6 @@ class Landing extends React.Component {
   render() {
     return (
       <div className="landing">
-        
         <img
           className="landingBackground"
           src="assets/Background new.png"
@@ -81,22 +80,24 @@ class Landing extends React.Component {
 
           <div className="cta">
             <div className="ctaVideoContainer">
-              <img
-                className="ctaVideo"
-                src="assets/cta/katherine-hanlon-bHhEJAXyFOg-unsplash.png"
-                alt="cta video"
-              />
-              <img
-                className="ctaVideoMobile"
-                src="assets/cta/mobile/katherine-hanlon-bHhEJAXyFOg-unsplash.png"
-                alt="cta video"
-              />
+              <Link to="/learn">
+                <img
+                  className="ctaVideo"
+                  src="assets/cta/katherine-hanlon-bHhEJAXyFOg-unsplash.png"
+                  alt="cta video"
+                />
+                <img
+                  className="ctaVideoMobile"
+                  src="assets/cta/mobile/katherine-hanlon-bHhEJAXyFOg-unsplash.png"
+                  alt="cta video"
+                />
 
-              <img
-                className="btnPlay"
-                src="assets/cta/play button.png"
-                alt="video play"
-              />
+                <img
+                  className="btnPlay"
+                  src="assets/cta/play button.png"
+                  alt="video play"
+                />
+              </Link>
             </div>
 
             <div className="ctaText">
