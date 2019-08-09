@@ -1,0 +1,51 @@
+@font-face {
+  font-family: Avenir;
+  src: url(../../assets/AvenirLTStd-Book.otf);
+}
+
+footer {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+footer .footer-top {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #24b4a5;
+
+}
+
+footer .footer-top .footer-p {
+  margin: 20px 8px 10px 0;
+  padding-top: 4px;
+  color: #24b4a5;
+  font-family: Avenir;
+  font-size: 26px;
+}
+
+footer .footer-top .heart {
+  font-size: 18px;
+  color: #24b4a5;
+}
+
+footer .footer-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2e2f38;
+}
+
+footer .footer-bottom .footer-icon {
+  margin: 18px 25px 0;
+  color: #2e2f38;
+  font-size: 42px;
+  cursor: pointer;
+}
