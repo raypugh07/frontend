@@ -191,7 +191,7 @@ code {
 .ctaContainer {
   display: flex;
   justify-content: center;
-  margin-right: 50px;
+  padding-right: 50px;
 }
 
 .cta {
@@ -204,7 +204,7 @@ code {
 .ctaBackground {
   position: absolute;
   z-index: -9;
-  margin: 110px 0 0 0;
+  padding: 110px 0 0 0;
 }
 
 .ctaVideoContainer {
@@ -299,7 +299,7 @@ code {
   }
 
   .ctaContainer {
-    margin: 200px 0 0 0;
+    padding: 200px 0 0 0;
     display: flex;
     flex-direction: column;
   }
@@ -351,6 +351,23 @@ code {
 }
 
 @media (max-width: 790px) {
+
+  .landingBackground {
+    display: none;
+    position: absolute;
+    z-index: -10;
+  }
+
+  .ctaContainer {
+    background-color: #8FEDC2;
+    padding: 100px 0 100px 0;
+  }
+
+  .ctaBackground {
+    display: none;
+    background-color: #8FEDC2;
+  }
+
   .ctaTextMobile {
     display: flex;
     flex-direction: column;
@@ -398,4 +415,9 @@ code {
     top: 30%;
     left: 35%;
   }
+
+  .whatWeDoContainer {
+    padding: 0 0 40px 0;
+  }
+
 }
