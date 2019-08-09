@@ -321,7 +321,7 @@ code {
 
   .whatWeDoContainer {
     margin: 0 auto;
-    padding: 170px 0 0 0;
+    padding: 170px 0 40px 0;
   }
 
   .whatWeDoImg {
@@ -373,11 +373,11 @@ code {
   }
 
   .intro {
-    margin: 50px 0 0 0;
+    margin: 100px 0 0 0;
   }
 
   .btnExplore {
-    margin: 20px 0 10px 250px;
+    margin: 20px 0 10px 160px;
   }
   .ctaVideoContainer {
     height: 328px;
@@ -390,12 +390,12 @@ code {
 
   .ctaVideoMobile {
     display: block;
-    width: 480px;
+    width: 100%;
   }
 
   .btnPlay {
     position: absolute;
-    top: 35%;
-    left: 40%;
+    top: 30%;
+    left: 35%;
   }
 }
