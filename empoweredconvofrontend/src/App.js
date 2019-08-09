@@ -10,6 +10,10 @@ import About from './components/About/About';
 import Nav from './components/NavBar/Bar';
 import Footer from './components/Footer/Footer';
 import Video from './components/Video/Video';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-145388884-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 class App extends Component {
   state = {

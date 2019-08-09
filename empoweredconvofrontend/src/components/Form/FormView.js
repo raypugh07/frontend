@@ -14,6 +14,7 @@ import {
 } from 'semantic-ui-react';
 import TOS from './TOS';
 import './Form.css';
+import ReactGA from 'react-ga';
 
 class FormView extends React.Component {
   state = {
@@ -41,7 +42,10 @@ class FormView extends React.Component {
       ffname: '',
       ffnumber: '',
     };
-    this.setState({ convoRequest: clearedReq }, () => this.handleModal2Open());
+    this.setState({ convoRequest: clearedReq }, () => {
+      this.handleModal2Open();
+      ReactGA.event({ category: 'User', action: 'Submit Convo Form' });
+    });
   }; // <- Is it this random bracket, here?
   // we good
 
