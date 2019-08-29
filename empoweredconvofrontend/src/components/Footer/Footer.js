@@ -25,9 +25,9 @@ export default function Footer(){
         </div>
       </div>
       <div className="footer-bottom">
-        <div className="footer-icon"><a href='https://twitter.com/empoweredconvo'>{icon}</a></div>
-        <div className="footer-icon"><a href='https://www.instagram.com/empoweredconvo/'>{icon2}</a></div>
-        <div className="footer-icon"><a href='https://www.facebook.com/empoweredconvo/'>{icon3}</a></div>
+        <div className="footer-icon"><a target="_blank" href='https://twitter.com/empoweredconvo'>{icon}</a></div>
+        <div className="footer-icon"><a target="_blank" href='https://www.instagram.com/empoweredconvo/'>{icon2}</a></div>
+        <div className="footer-icon"><a target="_blank" href='https://www.facebook.com/empoweredconvo/'>{icon3}</a></div>
       </div>
     </footer>
   );
